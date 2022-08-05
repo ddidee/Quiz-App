@@ -1,0 +1,13 @@
+.QuestionBody{
+    position: relative;
+    font-size: x-large;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.Question{
+    width: 100%;
+}

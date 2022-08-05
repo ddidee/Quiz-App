@@ -1,0 +1,17 @@
+.Answer{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 180%;
+    margin-top: 1.5rem;
+}
+.Option{
+    text-align: center;
+    flex-basis: 48%;
+    margin: .4rem 0;
+    padding: 6px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: grey;
+}

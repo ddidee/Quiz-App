@@ -1,14 +1,16 @@
 import React from 'react'
-import Aux from "./hoc/Auxilliary"
+import Aux from '../../hoc/Auxilliary'
+import Classes from "../Format/Format.module.css"
 
 
 const Format = (props) => {
     return(
         <Aux>
-            <div className={classes.Content}>QUIZ APP</div>
-            <main >
-                {props.children}
-            </main>
+            <div className= {Classes.Format}>
+                <main >
+                    {props.children}
+                </main>
+            </div>
         </Aux>
     )
 }
