@@ -1,17 +1,13 @@
-import React, { Component } from 'react'
-import Answer from "../Answer/Answer"
+import React from 'react'
 import Classes from "../Questions/Questions.module.css"
 
-class Questions extends Component {
-  render() {
+
+const Questions = (props) => {
     return (
-      <div className={Classes.QuestionBody}>
-        <div className={Classes.Question}>What is the capital of Nigeria?</div>
-        <Answer/>
+        <h2 className={Classes.Question}>{props.question}</h2>
         
-      </div>
     )
-  }
+  
 }
 
 export default Questions
