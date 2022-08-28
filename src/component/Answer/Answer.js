@@ -3,15 +3,29 @@ import Classes from "../Answer/Answer.module.css"
 
 const Answer = (props) => {
 
-  let answer = Object.keys(props.answer).map(option => {
-    return <div key= {option} 
-    className = {Classes.Option}
-    onClick= {props.onClick}>{props.answer[option]}</div>
+  let answer = Object.keys(props.answer)
+    .map(option => {
+      return <li 
+              className = 
+              {
+                props.correctAnswer === option ?
+                Classes.Right : 
+                props.clickedAnswer === option ?
+                Classes.Wrong : ''
+              }
+              key= {option} 
+
+              onClick= {() => props.checkAnswer(option)}>
+
+                {props.answer[option]}
+
+            </li>
   })
   return (
-    <div className={Classes.Answer}>
+    <ul className={Classes.Answer} 
+    disabled = {props.clickedAnswer ? true: false}>
       {answer}      
-    </div>
+    </ul>
   
   )
     

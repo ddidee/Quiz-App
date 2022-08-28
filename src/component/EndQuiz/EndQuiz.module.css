@@ -1,0 +1,15 @@
+.EndQuiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(20, 15, 15);
+    width: 100vw;
+    height: 100vh;
+    color: rgb(145, 145, 27);
+}
+
+p, h1{
+    font-size: 2rem;
+    font-weight: 800;
+}
