@@ -55,6 +55,7 @@ class QuizApp extends Component {
     clickedAnswer: 0
   }
 
+  // checking for correct answers
   checkAnswer = answer => {
     const { correctAnswers, step, score} = this.state
     if(answer === correctAnswers[step]){
@@ -103,6 +104,7 @@ class QuizApp extends Component {
             /> 
 
             <Button
+            // disabling the next button until an answer is clicked
               disabled = {
                 clickedAnswer && Object.keys(questions).length >= step
                 ? false : true
@@ -111,6 +113,8 @@ class QuizApp extends Component {
               />
 
           </>) : (
+
+            // ending the quiz if there are no more questions
            <EndQuiz
               score = {score}
               scoreLength= {Object.keys(questions).length}
@@ -127,33 +131,3 @@ class QuizApp extends Component {
 export default QuizApp
 
 
-// quizBank: [
-//   {
-//     id: 0,
-//     question: 'What is the capital of Nigeria?',
-//     options: ['Lagos', 'Kano', 'Abuja', 'Abia'],
-//     answer: 'Abuja'
-
-//   },
-//   {
-//     id: 2,
-//     question: 'What year did Nigeris gain her independence?',
-//     options: [1920, 1960, 1953, 1963],
-//     answer: 1960
-
-//   },
-//   {
-//     id: 3,
-//     question: 'What is the capital of Nassarawa?',
-//     options: ['Lafia', 'Gusau', 'Nassarawa', 'yola'],
-//     answer: 'Lafia'
-
-//   },
-//   {
-//     id: 4,
-//     question: 'What color is of the Nigerian flag?',
-//     options: ['Purple', 'Grey', 'Blue', 'White'],
-//     answer: 'White'
-
-//   }
-// ],
